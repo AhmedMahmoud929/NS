@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+section {
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(-45deg, #774ba1, #677ce9);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+form {
+    width: 340px;
+    height: 500px;
+    border-radius: 20px;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    position: relative;
+    background: rgba( 255, 255, 255, 0.3);
+    backdrop-filter: blur( 6px);
+    -webkit-backdrop-filter: blur( 6px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    z-index: 99;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+form .ball1 {
+    content: "";
+    position: absolute;
+    left: -150px;
+    bottom: -125px;
+    width: 280px;
+    height: 280px;
+    border-radius: 300px;
+    background: radial-gradient(circle at 65% 15%, #fbadbb 1px, #fda9b3 3%, #f15578 60%, #bb55f0 100%);
+    z-index: -1;
+}
+
+form .ball2 {
+    content: "";
+    position: absolute;
+    right: -60px;
+    top: -35px;
+    width: 120px;
+    height: 120px;
+    border-radius: 300px;
+    background: radial-gradient(circle at 65% 15%, #fbadbb 1px, #fda9b3 3%, #f15578 60%, #bb55f0 100%);
+    z-index: -1;
+}
+
+form .text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 30px;
+}
+
+form .text i {
+    margin: 0 10px;
+}
+
+form #bi {
+    border: 4px solid #fff;
+    border-radius: 40px;
+    outline: 0;
+    background-color: transparent;
+    color: #fff;
+    padding: 7px;
+    padding-left: 10px;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    width: 85%;
+}
+
+form #bi::placeholder {
+    color: #fff;
+    opacity: 0.8;
+    font-weight: 600;
+}
+
+form #bi[type=number]::-webkit-inner-spin-button,
+form #bi[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+form #btn {
+    border-radius: 40px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    outline: none;
+    background-image: linear-gradient(-45deg, #fbadbb 1px, #fda9b3 3%, #f15578 60%, #bb55f0 100%);
+    padding: 10px 30px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+form h1 {
+    font-size: 8rem;
+    color: #fff;
+    margin-top: 2rem;
+    margin-bottom: -3rem;
+    font-weight: 700;
+}
+
+form #btn2 {
+    border-radius: 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    outline: none;
+    background-image: linear-gradient(45deg, #fbadbb 1px, #fda9b3 3%, #f15578 60%, #bb55f0 100%);
+    padding: 5px 20px;
+    margin-top: 30px;
+    cursor: pointer;
+    pointer-events: none;
+    opacity: 0;
+}
+
+#reverse {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#me {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    width: 25px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#me:hover {
+    transform: rotate(-30deg);
+}
+
+@media (max-width:400px) {
+    .container {
+        transform: scale(0.8);
+        padding: 0 15px;
+    }
+    form .ball1 {
+        left: -100px;
+        bottom: -105px;
+        width: 260px;
+        height: 260px;
+    }
+    form .ball2 {
+        right: -10px;
+        top: 15px;
+        width: 100px;
+        height: 100px;
+    }
+}
